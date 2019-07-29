@@ -11,6 +11,12 @@
 |
 */
 
-Route::prefix('auth')->group(function() {
-    Route::get('/', 'AuthController@index');
+//Route::prefix('auth')->group(function() {
+//    Route::get('/', 'AuthController@index');
+//});
+
+Route::group([
+
+    ], function () {
+    Route::get('admin/auth', ['as' => 'admin.auth.index', 'uses' => 'AuthController@index']);
 });
